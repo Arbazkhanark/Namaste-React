@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="js"></div>
     <div id="root"></div>
 
+    <!-- These are CDN Links of React and very Short way to Implement -->
+
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- React DOM -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
     <script>
-        const root=document.getElementById("root");
-        console.log(root);
-        const h1=document.createElement("h1");
-        console.log(h1);
-        h1.innerText="Namaste React"
-        root.appendChild(h1)
+      // This is using JavaScript DOM
+      const js = document.getElementById("js");
+      const h1 = document.createElement("h1");
+      h1.innerText = "Namaste JavaScript";
+      js.appendChild(h1);
+
+      // This is using React DOM
+      const heading=React.createElement("h1",{},"Namaste React"); //object
+      const root=ReactDOM.createRoot(document.getElementById("root"))
+      root.render(heading)
 
     </script>
-</body>
+  </body>
 </html>
